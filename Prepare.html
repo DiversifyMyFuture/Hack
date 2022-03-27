@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel = "stylesheet" href = "style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.main-wrapper{
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.faq-title h1{
+    margin: 3rem 0 2.4rem 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+.faq-content{
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 1rem;
+}
+.faq-right-content, .faq-left-content{
+    padding: 1.2rem;
+}
+.faq-left-content{
+    text-align: center;
+}
+.faq-left-content img{
+    width: 75%;
+    display: block;
+    margin: 1rem auto;
+}
+.faq-left-content p{
+    font-weight: 400;
+    opacity: 0.95;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+.faq-item{
+    margin-bottom: 1rem;
+}
+.faq-item-head{
+    color: rgb(7, 7, 7);
+    border-bottom: 2px solid rgba(218, 134, 86, 0.8);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(90deg, #f8b72a 0%, #fc3030 100%);
+    box-shadow: 0 0 5px 0 rgb(1, 52, 255);
+    opacity: 0.85;
+    padding: 0.6rem 1rem;
+    border-radius: 9px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.faq-item-head:hover{
+    box-shadow: 0 0 15px 0 rgb(34, 0, 255);
+}
+.faq-item-icon{
+    cursor: pointer;
+}
+.faq-item-body{
+    overflow: hidden;
+    max-height: 0;
+    background: rgba(67, 207, 181, 0.186);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+.faq-item-body p{
+    font-weight: 300;
+    padding: 1rem;
+}
+.show-para{
+    max-height: 1000px; /* js related */
+}
+
+
+@media screen and (min-width: 800px){
+    .faq-left-content{
+        text-align: left;
+    }
+    .faq-left-content img{
+        margin-left: 0;
+    }
+    .faq-left-content p{
+        margin-left: 0;
+        max-width: 460px;
+    }
+    .faq-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+</style>
+
+</head>
+<body>
+    
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "faq-title"><h1 style="font-size:60px">Prepare</h1></div>
+            <div class = "faq-content">
+                <div class = "faq-left-content">
+                    <img src = "https://jerryjenkins.com/wp-content/uploads/2020/01/How-to-Write-a-Book-From-Start-to-Finish-1-e1591713313986-1024x708.png">
+                    <p><b>
+                        Now that you've chosen a university that holds true to your passion as well as 
+                        shelters a safe and inclusive space for all of its students (all ages, financial status, 
+                        geneder, race, etc), here's the real question: How do we get in?
+                    </b></p>
+            </div>
+
+                <div class = "faq-right-content">
+                    <div class = "faq-item">
+                        <div class = "faq-item-head">
+                            <span class = "faq-item-text">Leverage Diversity in Admissions</span>
+                            <span class = "faq-item-icon">
+                                <i class = "fa fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class = "faq-item-body">
+                            Students should consider all aspects of their identity and how those fit when choosing a college. 
+                        </br>Flores encourages minority students to think of their diversity "as an asset that they 
+                            are offering to the institution to enrich the educational experience for all students" 
+                            when they are applying to a college.
+                        </div>
+                    </div>
+
+                    <div class = "faq-item">
+                        <div class = "faq-item-head">
+                            <span class = "faq-item-text">Speaking to Your Identity</span>
+                            <span class = "faq-item-icon">
+                                <i class = "fa fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class = "faq-item-body">
+                            Student identity extends beyond racial and ethnic considerations to the many facets 
+                            that make them who they are. </br> "They should talk about (diversity) as something 
+                            that's important to them in terms of their identity, and link it to the different 
+                            things that are taking place at the institution that draw them to that institution," 
+                            Wood says.
+
+                        </div>
+                    </div>
+
+                    <div class = "faq-item">
+                        <div class = "faq-item-head">
+                            <span class = "faq-item-text">Diversity Statement</span>
+                            <span class = "faq-item-icon">
+                                <i class = "fa fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class = "faq-item-body">
+                            <p> <b>Do not write a throwaway diversity statement.</b> Make sure to <i> tell your story with
+                                diversity </i> Show the obstacles you overcame. Concertrate on issues like
+                                race, gender, class, and don't tone down your statement.
+                        </div>
+                    </div>
+
+                    <div class = "faq-item">
+                        <div class = "faq-item-head">
+                            <span class = "faq-item-text">Highlights</span>
+                            <span class = "faq-item-icon">
+                                <i class = "fa fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class = "faq-item-body">
+                            <p>Write about specific things you have done to help students from underrepresented backgrounds succeed.
+                                Highlight any programs for underrepresented students you’ve participated in.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class = "faq-item">
+                        <div class = "faq-item-head">
+                            <span class = "faq-item-text">Specific</span>
+                            <span class = "faq-item-icon">
+                                <i class = "fa fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class = "faq-item-body">
+                            Your statement for a land-grant institution in the rural South should not be the 
+                            exact same one you send to an elite institution in urban California. 
+                            Look up the demographics of the institution to which you are applying 
+                            and mention those demographics in your statement. Modify your statement based on where you are sending it.
+                        </div>
+                    </div>
+
+                    <div class = "faq-item">
+                        <div class = "faq-item-head">
+                            <span class = "faq-item-text">Developing a Diversity Statement</span>
+                            <span class = "faq-item-icon">
+                                <i class = "fa fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class = "faq-item-body">
+                            <b> - Statement of values</b> as they relate to your understanding and commitment to diversity, inclusion, equity, and/or justice in higher education.
+                        </br><b> - Examples of experiences</b>  that demonstrate your commitment to fostering the success of underrepresented students, staff, and peers, and supporting a diversity of perspectives in the classroom, lab, campus, or community.
+                    </br> <b> - Future plans</b> for continuing to advance inclusive excellence, diversity, or equity in your research, teaching, and service
+                        </div>
+                    </div>
+
+                    <div class = "faq-item">
+                        <div class = "faq-item-head">
+                            <span class = "faq-item-text">Frames of Reference</span>
+                            <span class = "faq-item-icon">
+                                <i class = "fa fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class = "faq-item-body">
+                            What are your values regarding diversity, inclusion, and equity in your professional life? Why do you think diversity is valuable in higher education settings? How about in your discipline specifically?
+                        </div>
+                    </div>
+
+                    <div class = "faq-item">
+                        <div class = "faq-item-head">
+                            <span class = "faq-item-text">Continue Diverse Development</span>
+                            <span class = "faq-item-icon">
+                                <i class = "fa fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class = "faq-item-body">
+                            What kinds of student, staff, or faculty diversity are you thinking of as you answer this question, and are there other ways in which diversity manifests in campus communities that might be valuable to consider?</div>
+                    </div>
+
+                    
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src = "script.js"></script>
+
+    <script>
+        const faqItemHead = document.querySelectorAll('.faq-item-head');
+
+
+faqItemHead.forEach((head, index) => {
+    head.addEventListener('click', () => {
+        let icon = head.querySelector('.faq-item-icon').firstElementChild;
+        if(icon.className == "fa fa-chevron-down"){
+            head.nextElementSibling.classList.add('show-para');
+            icon.className = "fa fa-chevron-up";
+        } else if(icon.className == "fa fa-chevron-up"){
+            head.nextElementSibling.classList.remove('show-para');
+            icon.className = "fa fa-chevron-down";
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
